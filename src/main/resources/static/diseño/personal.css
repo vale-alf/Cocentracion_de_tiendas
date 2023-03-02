@@ -1,0 +1,22 @@
+.bg-blue{
+
+    background:linear-gradient(to bottom, #078FCD 0%, #078FCD 100%);
+}
+
+.center{
+    text-align: center;
+}
+
+.logo
+{
+    padding:20px; 
+}
+.btnCard
+{
+    margin: 10px auto 30px auto;
+}
+
+.btnCard .btn
+{
+    margin-right: 10px;
+}

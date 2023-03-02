@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+
+    <head>
+        <link th:href="@{/diseño/main.css}" rel="stylesheet">
+        <link th:href="@{/diseño/personal.css}" rel="stylesheet">
+        <link th:href="@{/diseño/index.css}" rel="stylesheet">
+        <link th:href="@{/diseño/Buscador.css}" rel="stylesheet">
+         <script th:src="@{/js/jsTiendas.js}"></script>
+
+        <title>Tiendas</title>
+    </head>
+
+    <body id="page-top">
+        <nav class="navbar navbar-expand navbar-dark bg-blue static-top">
+            <a class="navbar-brand mr-1" href="/Usuario/Panel"><img th:src="@{/imagen/logo_2.png}" width="160px"></a>
+            <button class="btn btn-link btn-sm text-white order-1 order-sm-0" id="sidebarToggle" href="#">
+                <i class="fas fa-bars"></i>
+            </button>
+        </nav>
+
+        <div id="wrapper">
+            <!--BARRA IZQUIERSA-->
+            <ul id="menu" class="sidebar navbar-nav">
+                <li id="menu_li" class="nav-item">
+                    <a class="nav-link" href="/Producto/Buscar">
+                        <i class="fas fa-fw fa-tachometer-alt"></i>
+                        <span>BUSCAR PRODUCTOS</span>
+                    </a>
+                </li>
+                <li class="nav-item active">
+                    <a id="foodtrucks" class="nav-link" href="/Usuario/Tienda">
+                        <i class="fas fa-fw fa-chart-area"></i>
+                        <span>VER TIENDAS</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/Login/">
+                        <i class="fas fa-fw fa-table"></i>
+                        <span>SALIR</span></a>
+                </li>
+            </ul>
+           
+            <div id="content-wrapper">
+
+                <div class="container-fluid">
+                    <div class="card mb-3">
+                        <div class="card-header" style="height: 3rem;">
+                            <h5><strong>Tiendas disponibles:  <span th:text="${Tienda.size()}"></span></strong></h5><br>
+                        </div>
+                        <div class="card-body">
+                            <center>
+                                <div class="row mb-4" id="ListarTiendas">
+                                    <!--AQUI ES DONDE SE INSERTAN LAS TIENDAS QUE SE AGREGAN-->
+                                    <center>
+
+                                        <div class="table-responsive" >
+                                            <table class="table table-hover table-bordered"  id="dataTable"  cellspacing="0">
+
+                                                <thead>
+                                                    <tr>
+                                                        <th>ID</th>
+                                                        <th>Nombre de dueño</th>
+                                                        <th>Nombre de local</th>
+                                                        <th>Numero de local</th>
+                                                        <th> Descripción</th>
+                                                        <th> Referencia</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr th:each="tienda:${Tienda}" >
+                                                        <td th:text="${tienda.id}"></td>
+                                                        <td th:text="${tienda.nombre}" ></td>
+                                                        <td th:text="${tienda.local}" ></td>
+                                                        <td th:text="${tienda.numero}" ></td>
+                                                        <td th:text="${tienda.descripcion}" ></td>
+                                                        <td th:text="${tienda.referencia}" ></td>             
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </center>
+                                </div>
+                            </center>
+                        </div>
+
+                    </div>
+                </div>
+                </body>
+                <footer class="sticky-footer">
+                    <div class="container my-auto">
+                        <div class="copyright text-center my-auto">
+                            <span class="text-primary">ShopFinder</span></p>
+                            <span class="text-primary">Creado por Luis, Valeska, Dennys, Orrala</span></p>
+                        </div>
+                    </div>
+                </footer>
+            </div>
+
+        </div>
+
+        <!-- Scroll to Top Button-->
+        <a class="scroll-to-top rounded" href="#page-top">
+            <i class="fas fa-angle-up"></i>
+        </a>
+
+        <!-- Logout Modal-->
+        <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+             aria-hidden="true">
+        </div>
+
+
+
+</html>

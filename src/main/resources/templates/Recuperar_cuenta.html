@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Recuperar cuenta</title>
+      <link th:href="@{/diseño/main.css}" rel="stylesheet">
+        <link th:href="@{/diseño/personal.css}" rel="stylesheet">
+</head>
+<body class="">
+  <div class="container">
+    <div class="card card-login mx-auto mt-5">
+     <img class="logo"  th:src="@{/imagen/logo_1.png}"  width="400px">
+      <div class="card-header bg-blue center"><b>Recuperar cuenta</b></div>
+      <div class="card-body">
+        <form>
+          <div class="form-group">
+            <div class="form-label-group">
+              <input type="email" id="email" class="form-control" placeholder="email" required="required" autofocus="autofocus">
+              <label for="email">Ingresa el email para recuperar la cuenta</label>
+            </div>
+          </div>
+          <a class="btn btn-secondary btn-block" href="#" onclick="recuperarCuenta()">Recuperar</a>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
+ 

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+    <head>
+        <link th:href="@{/diseño/main.css}" rel="stylesheet">
+        <link th:href="@{/diseño/personal.css}" rel="stylesheet">
+        <script th:src="@{/js/login.js}"></script>
+        <title>Principal</title>
+    </head>
+    <body class="">
+        <div class="container">
+            <div class="card card-login mx-auto mt-5">
+                <img class="logo" th:src="@{/imagen/logo_1.png}" width="400">
+                <div class="card-header bg-blue center"><b>Iniciar sesion</b></div>
+                <div class="card-body">
+                    <form>
+                        <div class="form-group">
+                            <div class="form-label-group">
+                                <input type="usuario" id="usuario" class="form-control" placeholder="Usuario" required="required" autofocus="autofocus">
+                                <label for="usuario">Usuario</label>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="form-label-group">
+                                <input type="password" id="password" class="form-control" placeholder="Contraseña" required="required">
+                                <label for="password">Contraseña</label>
+                            </div>
+                        </div>
+                        <a class="btn btn-secondary btn-block" href="#" onclick="login()" >Entrar</a>
+                        <p></p>
+                        
+                    </form>
+                </div>
+            </div>
+        </div>
+
+    </body>
+</html>

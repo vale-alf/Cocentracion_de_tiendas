@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Principal</title>
+       <link th:href="@{/diseño/main.css}" rel="stylesheet">
+        <link th:href="@{/diseño/personal.css}" rel="stylesheet">
+        <script th:src="@{/js/login.js}"></script>
+</head>
+<body class="">
+    
+  <div class="container">
+    <div class="card card-login mx-auto mt-5">
+     <img class="logo" th:src="@{/imagen/logo_1.png}" width="400px">
+      <div class="card-header bg-blue center"><b>Registrarse</b></div>
+      <div class="card-body">
+        <form>
+          <div class="form-group">
+            <div class="form-label-group" style="display:inline-block; position: relative; width: 176px;">
+              <input type="nombre" id="nombre" style="width: 176px;" class="form-control"  placeholder="Nombre" required="required" autofocus="autofocus">
+              <label for="nombre">Nombre</label>
+            </div>
+
+            <div class="form-label-group" style="display: inline-block;position: relative;  width: 177px;">
+              <input type="apellido" id="apellido" class="form-control"  placeholder="Apellido" required="required">
+              <label for="apellido">Apellido</label>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <div class="form-label-group">
+              <input type="usuario" id="usuario" class="form-control" placeholder="Usuario" required="required">
+              <label for="usuario">Usuario</label>
+            </div>
+          </div>
+          <div class="form-group">
+            <div class="form-label-group">
+              <input type="password" id="password" class="form-control" placeholder="Contraseña" required="required">
+              <label for="password">Contraseña</label>
+            </div>
+          </div>
+          <div class="form-group">
+            <div class="form-label-group">
+              <input type="email" id="email" class="form-control" placeholder="Email" required="required">
+              <label for="email">Email</label>
+            </div>
+          </div>
+          <div class="form-group">
+            <div class="form-label-group">
+              <input type="date" id="date" class="form-control" placeholder="Fecha de nacimiento" required="required">
+              <label for="date">Fecha de nacimiento</label>
+            </div>
+          </div>
+          <a class="btn btn-secondary btn-block" href="#" onclick="registrarse()">Registrarse</a>
+        </form>
+          <div class="form-group">
+                            <div class="form-label-group">
+                                <center>
+                                <a href="/Login/"> Volver el Login</a>
+                                </center>
+                            </div>
+                        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
+ 
